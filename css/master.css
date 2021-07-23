@@ -102,13 +102,14 @@ body{
 .card .stat ul{
     list-style: none;
     display: flex;
+    justify-content: space-evenly;
     padding: 0;
     margin: 20px 0;
 }
 
 .card .stat ul li{
+    flex-basis: calc(25% - 20px);
    font-weight: 700;
-   width: -webkit-fill-available;
 }
 
 .card .stat ul li span{
