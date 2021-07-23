@@ -1,0 +1,183 @@
+/* Start Variables  */
+
+:root{
+    --cyan: hsl(185, 75%, 39%);
+    --desaturated-blue: hsl(229, 23%, 23%);
+    --grayish-blue: hsl(227, 10%, 46%);
+    --gray: hsl(0, 0%, 59%);
+}
+
+/* End Variables  */
+
+/* Start Global Rules */
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cyan);
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+}
+
+@media (min-width: 768px ) {
+    .container{
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px ) {
+    .container{
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px ) {
+    .container{
+        width: 1170px;
+    }
+}
+
+/* End Global Rules */
+
+
+/* Start container */
+
+.content{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.top-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -50%;
+    left: -50%;
+}
+
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    text-align: center;
+    width: 350px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+@media (max-width: 767px) {
+    .card{
+        max-width: 300px;
+    }
+}
+
+.card .head-image{
+    background-image: url(../images/bg-pattern-card.svg);
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    height: 150px;
+    border-radius: 10px 10px 0 0;
+}
+
+.card .head-image .per-photo{
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: -65%;
+    transform: translate(-50%, -45%);
+    border: 6px solid white;
+}
+
+.card .personal-info{
+    border-bottom: 1px solid hsl(0, 0%, 85%);
+}
+
+.card .personal-info h1{
+    font-size: 18px;
+    margin-top: 70px;
+    color: var(--desaturated-blue);
+}
+
+.card .personal-info h1 span{
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: 400;
+    color: var(--gray);
+}
+
+.card .personal-info p{
+    font-weight: 400;
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.card .stat ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.card .stat ul li{
+   font-weight: 700;
+   width: -webkit-fill-available;
+}
+
+.card .stat ul li span{
+    display: block;
+    font-weight: 400;
+    color: var(--gray);
+    font-size: 10px;
+    padding-top: 5px;
+    letter-spacing: 2px;
+}
+
+.bottom-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -50%;
+    right: -50%;
+}
+
+@media (min-width: 992px) {
+    .top-img{
+        width: 70%;
+        height: 100%;
+        top: -50%;
+        left: -20%;
+    }
+
+    .bottom-img{
+        width: 70%;
+        height: 100%;
+        bottom: -50%;
+        right: -20%;
+    }
+
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 2;
+    color: var(--desaturated-blue);
+}
+
+/* End  container */
