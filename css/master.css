@@ -153,6 +153,7 @@ footer{
     width: 100%;
     z-index: 2;
     color: var(--desaturated-blue);
+    margin-bottom: 20px;
 }
 
 /* End  container */
